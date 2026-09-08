@@ -1,16 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { MapPin, Phone, Smartphone, Mail, Send, CheckCircle } from 'lucide-react'
+import { MapPin, Smartphone, Mail, Send, CheckCircle } from 'lucide-react'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const location = useLocation()
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     phone: '',
     subject: '',
     message: '',
   })
+
+  useEffect(() => {
+    const hash = location.hash.slice(1)
+    if (hash) {
+      const element = document.getElementById(hash)
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' , 
+           })
+        }, 100)
+      }
+    }
+  }, [location])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -21,7 +35,7 @@ export default function Contact() {
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+      setFormData({ email: '', phone: '', subject: '', message: '' })
     }, 3000)
   }
 
@@ -37,7 +51,7 @@ export default function Contact() {
       {/* Contact Info & Form */}
       <section className="section-padding bg-white">
         <div className="auto-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
+          <div id="contact-form" className="grid grid-cols-1 lg:grid-cols-2 gap-14">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -24 }}
@@ -58,21 +72,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-[#1a1a2e] mb-1 text-sm">Head Office</h4>
                     <p className="text-gray-500 text-sm leading-relaxed">
-                      Shop No 2, Ground Flr, Plot No 546, Patra Chawl, Pathe Bapurao Marg, Near Gulalwadi Circle, Mumbai – 400004.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-gray-50/80 border border-gray-100">
-                  <div className="w-11 h-11 bg-[#1a1a2e]/5 rounded-lg flex items-center justify-center shrink-0">
-                    <Phone size={18} className="text-[#1a1a2e]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#1a1a2e] mb-1 text-sm">Phone</h4>
-                    <p className="text-gray-500 text-sm">
-                      <a href="tel:+912223872212" className="hover:text-[#1a1a2e] transition-colors">+91 22 23872212</a>
-                      {' | '}
-                      <a href="tel:+912266362696" className="hover:text-[#1a1a2e] transition-colors">+91 22 66362696</a>
+                      OFFICE NO. 27A, FLOOR-1ST, PLOT-160, MULJI MADHAVJI NIWAS, NEAR C P TANK BEST SUB STATION, CP TANK, GIRGAON, MUMBAI - 400004, MAHARASHTRA (INDIA)
                     </p>
                   </div>
                 </div>
@@ -84,8 +84,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-[#1a1a2e] mb-1 text-sm">Mobile</h4>
                     <p className="text-gray-500 text-sm">
-                      <a href="tel:+919664834661" className="hover:text-[#1a1a2e] transition-colors block">+91 9664834661</a>
-                      <a href="tel:+918422020534" className="hover:text-[#1a1a2e] transition-colors block">+91 8422020534</a>
+                      <a href="tel:+919664834661" className="hover:text-[#1a1a2e] transition-colors block">+91 9664834661 (Kalpesh Bhai)</a>
                     </p>
                   </div>
                 </div>
@@ -96,8 +95,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#1a1a2e] mb-1 text-sm">Email</h4>
-                    <a href="mailto:info@jkpipefit.com" className="text-gray-500 text-sm hover:text-[#1a1a2e] transition-colors">
-                      info@jkpipefit.com
+                    <a href="mailto:jkpipefit@gmail.com" className="text-gray-500 text-sm hover:text-[#1a1a2e] transition-colors">
+                      jkpipefit@gmail.com
                     </a>
                   </div>
                 </div>
@@ -125,19 +124,7 @@ export default function Contact() {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-xs font-medium text-gray-600 mb-1.5">Your Name *</label>
-                        <input
-                          type="text"
-                          name="name"
-                          required
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#1a1a2e]/10 focus:border-[#1a1a2e] outline-none transition-colors text-sm"
-                          placeholder="John Doe"
-                        />
-                      </div>
+                    <div className="grid grid-cols-1 gap-4">
                       <div>
                         <label className="block text-xs font-medium text-gray-600 mb-1.5">Email Address *</label>
                         <input

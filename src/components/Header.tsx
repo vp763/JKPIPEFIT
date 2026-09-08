@@ -88,9 +88,9 @@ export default function Header() {
                 <Phone size={12} />
                 <span>+91 8422020534</span>
               </a>
-              <a href="mailto:info@jkpipefit.com" className="flex items-center gap-1.5 hover:text-[#c9a227] transition-colors">
+              <a href="mailto:jkpipefit@gmail.com" className="flex items-center gap-1.5 hover:text-[#c9a227] transition-colors">
                 <Mail size={12} />
-                <span>info@jkpipefit.com</span>
+                <span>jkpipefit@gmail.com</span>
               </a>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function Header() {
             <Link to="/" className="flex items-center gap-3">
               <img
                 src="/images/logo.png"
-                alt="JK Pipefit LLP"
+                alt="JK Pipefit"
                 className="h-11 w-auto object-contain"
               />
             </Link>
@@ -124,10 +124,28 @@ export default function Header() {
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
                   {item.children ? (
-                    <button className="flex items-center gap-1 px-4 py-2 text-[13px] font-medium text-gray-600 hover:text-[#1a1a2e] transition-colors tracking-wide">
-                      {item.label}
-                      <ChevronDown size={13} />
-                    </button>
+                    <>
+                      <button className="flex items-center gap-1 px-4 py-2 text-[13px] font-medium text-gray-600 hover:text-[#1a1a2e] transition-colors tracking-wide">
+                        {item.label}
+                        <ChevronDown size={13} />
+                      </button>
+
+                      <div
+                        className={`nav-dropdown absolute top-full left-0 bg-white shadow-xl rounded-lg py-2 min-w-[260px] border border-gray-100/80 max-h-[70vh] overflow-y-auto transition-all duration-200 ${
+                          openDropdown === item.label ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                        }`}
+                      >
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.label}
+                            to={child.href}
+                            className="block px-4 py-2.5 text-[13px] text-gray-500 hover:text-[#1a1a2e] hover:bg-gray-50/80 transition-colors"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </>
                   ) : (
                     <Link
                       to={item.href}
@@ -139,24 +157,6 @@ export default function Header() {
                     >
                       {item.label}
                     </Link>
-                  )}
-
-                  {item.children && (
-                    <div
-                      className={`nav-dropdown absolute top-full left-0 bg-white shadow-xl rounded-lg py-2 min-w-[260px] border border-gray-100/80 max-h-[70vh] overflow-y-auto ${
-                        openDropdown === item.label ? 'opacity-100 visible translate-y-0' : ''
-                      }`}
-                    >
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          className="block px-4 py-2.5 text-[13px] text-gray-500 hover:text-[#1a1a2e] hover:bg-gray-50/80 transition-colors"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
                   )}
                 </div>
               ))}
@@ -245,7 +245,7 @@ export default function Header() {
                   </div>
                 ))}
 
-                <div className="mt-4 pt-4 border-t border-gray-100 space-y-2 text-sm">
+                <div className="mt-4 pt-4 space-y-2 text-sm">
                   <a href="tel:+919664834661" className="flex items-center gap-2 text-gray-600">
                     <Phone size={14} className="text-[#1a1a2e]" />
                     +91 9664834661
@@ -254,9 +254,9 @@ export default function Header() {
                     <Phone size={14} className="text-[#1a1a2e]" />
                     +91 8422020534
                   </a>
-                  <a href="mailto:info@jkpipefit.com" className="flex items-center gap-2 text-gray-600">
+                  <a href="mailto:jkpipefit@gmail.com" className="flex items-center gap-2 text-gray-600">
                     <Mail size={14} className="text-[#1a1a2e]" />
-                    info@jkpipefit.com
+                    jkpipefit@gmail.com
                   </a>
                 </div>
               </div>

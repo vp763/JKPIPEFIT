@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { CheckCircle, Truck, DollarSign, Headphones, Briefcase, Award } from 'lucide-react'
+import { CheckCircle, Truck, IndianRupee, Headphones, Briefcase, Award } from 'lucide-react'
 
 const differentiators = [
   {
@@ -14,7 +14,7 @@ const differentiators = [
     text: 'Our efficient supply chain management guarantees timely deliveries for every order.',
   },
   {
-    icon: DollarSign,
+    icon: IndianRupee,
     title: 'Competitive Prices',
     text: 'Quality should not come at a premium. We offer the best prices without compromising quality.',
   },
@@ -32,8 +32,6 @@ const differentiators = [
 
 const certificates = [
   'ISO 9001:2015',
-  'PED 2014/68/EU',
-  'AD 2000 Merkblatt W0',
   'NACE MR0175',
 ]
 
@@ -64,14 +62,8 @@ export default function About() {
                 transition={{ duration: 0.7 }}
               >
                 <span className="sub-title">About Us</span>
-                <h2 className="text-3xl md:text-[2.25rem] font-bold text-[#1a1a2e] mb-4 leading-tight">JK Pipefit LLP</h2>
+                <h2 className="text-3xl md:text-[2.25rem] font-bold text-[#1a1a2e] mb-4 leading-tight">JK Pipefit</h2>
                 <div className="divider mb-6" />
-
-                <p className="text-gray-500 leading-[1.8] mb-5 text-[15px]">
-                  JK Pipefit LLP has been a trusted name for over three decades, established in 1992. With years of
-                  experience and a commitment to excellence, we consistently deliver top-notch products and services to
-                  various industries.
-                </p>
 
                 <p className="text-gray-500 leading-[1.8] mb-8 text-[15px]">
                   We are a proud manufacturer and exporter of Stainless Steel, High Nickel Alloy, and Duplex
@@ -136,12 +128,12 @@ export default function About() {
                     </p>
                     <p className="text-gray-300">
                       <strong className="text-white">Email:</strong>{' '}
-                      <a href="mailto:info@jkpipefit.com" className="hover:text-[#c9a227] transition-colors">
-                        info@jkpipefit.com
+                      <a href="mailto:jkpipefit@gmail.com" className="hover:text-[#c9a227] transition-colors">
+                        jkpipefit@gmail.com
                       </a>
                     </p>
                     <p className="text-gray-300">
-                      <strong className="text-white">Address:</strong> Shop No 2, Ground Flr, Plot No 546, Patra Chawl, Pathe Bapurao Marg, Mumbai - 400004.
+                      <strong className="text-white">Address:</strong> OFFICE NO. 27A, FLOOR-1ST, PLOT-160, MULJI MADHAVJI NIWAS, NEAR C P TANK BEST SUB STATION, CP TANK, GIRGAON, MUMBAI - 400004, MAHARASHTRA (INDIA).
                     </p>
                   </div>
                   <Link
@@ -171,7 +163,7 @@ export default function About() {
             <h2 className="text-3xl md:text-[2.25rem] font-bold text-[#1a1a2e] mb-4">Our Commitment to Quality</h2>
             <div className="divider divider-center mb-8" />
             <p className="text-gray-500 leading-[1.8] mb-6 text-[15px]">
-              At JK Pipefit LLP, quality is not just a goal but a way of life. We have implemented a comprehensive
+              At JK Pipefit, quality is not just a goal but a way of life. We have implemented a comprehensive
               quality management system covering every aspect of operations from raw material procurement to final delivery.
             </p>
             <p className="text-gray-500 leading-[1.8] mb-10 text-[15px]">
@@ -179,7 +171,7 @@ export default function About() {
               assurance techniques.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2  gap-3">
               {certificates.map((cert) => (
                 <div
                   key={cert}
@@ -215,8 +207,9 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
             {[
               { title: 'ISO 9001:2015', desc: 'Quality Management System' },
-              { title: 'ISO 14001:2015', desc: 'Environmental Management' },
-              { title: 'OHSAS 18001:2007', desc: 'Occupational Health & Safety' },
+              { title: 'GST', desc: 'Goods and Services Tax' },
+              { title: 'MSME', desc: 'Micro, Small and Medium Enterprises' },
+              { title: 'Gumasta', desc: 'Geographical Indication' },
             ].map((cert, index) => (
               <motion.div
                 key={cert.title}

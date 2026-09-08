@@ -1,22 +1,22 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { CheckCircle, DollarSign, Award, Settings, Star, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
+import { CheckCircle, Award, Settings, ChevronLeft, ChevronRight, ArrowRight, IndianRupee } from 'lucide-react'
 
 const heroSlides = [
+  // {
+  //   image: '/images/hero-stainless-carbon.jpg',
+  //   subtitle: 'Manufacturer of',
+  //   title: 'Stainless Steel / Carbon Steel',
+  //   text: 'High-quality Stainless Steel and Carbon Steel Sheets, Plates, Pipes, and Fittings for industrial applications.',
+  //   link: '/products/sheets',
+  // },
   {
     image: '/images/hero-stainless-carbon.jpg',
     subtitle: 'Manufacturer of',
     title: 'Stainless Steel / Carbon Steel',
     text: 'High-quality Stainless Steel and Carbon Steel Sheets, Plates, Pipes, and Fittings for industrial applications.',
-    link: '/products',
-  },
-  {
-    image: '/images/hero-copper-nickel.jpg',
-    subtitle: 'Manufacturer of',
-    title: 'Copper and Copper Nickel 90/10 and 70/30',
-    text: 'Premium Copper Nickel pipe fittings in 90/10 and 70/30 grades for marine and seawater applications.',
-    link: '/products/copper-nickel-pipe-fittings',
+    link: '/products/sheets',
   },
   {
     image: '/images/hero-gunmetal.jpg',
@@ -25,16 +25,23 @@ const heroSlides = [
     text: 'Durable Gunmetal flanges manufactured to precision for valves, pumps, and piping systems.',
     link: '/products/gunmetal-flanges',
   },
+  {
+    image: '/images/hero-copper-nickel.jpg',
+    subtitle: 'Manufacturer of',
+    title: 'Copper and Copper Nickel 90/10 and 70/30',
+    text: 'Premium Copper Nickel pipe fittings in 90/10 and 70/30 grades for marine and seawater applications.',
+    link: '/products/copper-nickel-pipe-fittings',
+  },
 ]
 
 const features = [
   {
     icon: CheckCircle,
     title: 'Client Oriented',
-    text: 'Immediate Response, Excellent Quality, Quick Delivery, and Customer Satisfaction define JK Pipefit LLP.',
+    text: 'Immediate Response, Excellent Quality, Quick Delivery, and Customer Satisfaction define JK Pipefit.',
   },
   {
-    icon: DollarSign,
+    icon: IndianRupee,
     title: 'Competitive Prices',
     text: 'We offer a commendable range of Flanges & Forged Fittings with competitive prices & quality.',
   },
@@ -65,41 +72,21 @@ const pipeFittingProducts = [
   { name: 'Carbon Steel Pipe Fittings', image: '/images/carbon-steel-fittings.jpg', link: '/products/carbon-steel-pipe-fittings' },
   { name: 'Stainless Steel Pipe Fittings', image: '/images/stainless-steel-fittings.jpg', link: '/products/stainless-steel-pipe-fittings' },
   { name: 'Copper Nickel Pipe Fittings', image: '/images/copper-nickel-90-10.jpg', link: '/products/copper-nickel-pipe-fittings' },
-  { name: 'Gunmetal Flanges', image: '/images/gunmetal-flanges.jpg', link: '/products/gunmetal-flanges' },
-]
-
-const testimonials = [
-  {
-    text: 'We have been dealing with JK Pipefit LLP for the past 4 years. The Stainless Steel Pipe Fittings supplied by them are of top-notch quality that deliver consistent performance every time.',
-    name: 'Deep Mehta',
-    role: 'Manager',
-  },
-  {
-    text: 'Ordered Stainless Steel Flange as per a specific drawing from JK Pipefit LLP and got it as per my specification, precise and great quality.',
-    name: 'Karan Sharma',
-    role: 'Director',
-  },
-  {
-    text: 'We have been doing business with JK Pipefit LLP for more than seven years and we found them as the best overseas supplier due to their price and quality of products.',
-    name: 'Sahil Shaikh',
-    role: 'Asst. Director',
-  },
+  { name: 'Gunmetal Flanges', image: '/images/hero-gunmetal.jpg', link: '/products/gunmetal-flanges' },
 ]
 
 const clients = [
-  { name: 'Colourtex', logo: '/images/client-colourtex.png' },
-  { name: 'Thirumalai Chemicals', logo: '/images/client-thirumalai.png' },
-  { name: 'ACG', logo: '/images/client-acg.png' },
-  { name: 'Torrent Power', logo: '/images/client-torrent.png' },
-  { name: 'Balmer Lawrie', logo: '/images/client-balmer.png' },
-  { name: 'Navin Fluorine', logo: '/images/client-navin.png' },
-  { name: 'Larsen & Toubro', logo: '/images/client-lt.png' },
-  { name: 'ONGC', logo: '/images/client-ongc.png' },
-  { name: 'Vedanta', logo: '/images/client-vedanta.png' },
-  { name: 'IOCL', logo: '/images/client-iocl.png' },
-  { name: 'BPCL', logo: '/images/client-bpcl.png' },
-  { name: 'HPCL', logo: '/images/client-hpcl.png' },
-  { name: 'ISRO', logo: '/images/client-isro.png' },
+  { name: 'Cochin Shipyard', logo: '/images/client-cochin-shipyard-logo.jpg' },
+  { name: 'HSL', logo: '/images/client-hsl-logo.jpg' },
+  { name: 'IOCL', logo: '/images/client-iocl-logo.jpg' },
+  { name: 'INT', logo: '/images/client-l-n-t-logo.jpg' },
+  { name: 'MDL', logo: '/images/client-mdl-logo.jpg' },
+  { name: 'NPCIL', logo: '/images/client-npcil-logo.jpg' },
+  { name: 'ONGC', logo: '/images/client-ongc-logo.jpg' },
+  { name: 'BPCL', logo: '/images/client-BPCL-logo.webp' },
+  { name: 'HPCL', logo: '/images/client-HPCL-logo.webp' },
+  { name: 'ISRO', logo: '/images/client-isro-logo.webp' },
+
 ]
 
 const industries = [
@@ -113,7 +100,6 @@ const industries = [
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -131,9 +117,9 @@ export default function Home() {
       <section className="relative h-[520px] md:h-[620px] lg:h-[680px] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
-            key={index}
+            key={slide.link}
             className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+              index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           >
             <div
@@ -143,9 +129,9 @@ export default function Home() {
               <div className="relative h-full flex items-center">
                 <div className="auto-container">
                   <motion.div
-                    key={`slide-${index}-${currentSlide}`}
+                    key={`slide-${slide.link}`}
                     initial={{ opacity: 0, y: 24 }}
-                    animate={index === currentSlide ? { opacity: 1, y: 0 } : {}}
+                    animate={index === currentSlide ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
                     transition={{ duration: 0.7, delay: 0.15 }}
                     className="max-w-2xl"
                   >
@@ -155,7 +141,7 @@ export default function Home() {
                     </h1>
                     <p className="text-gray-300 text-base md:text-lg mb-8 max-w-lg leading-relaxed">{slide.text}</p>
                     <Link to={slide.link} className="theme-btn theme-btn-primary">
-                      Explore Products
+                      Explore Product
                     </Link>
                   </motion.div>
                 </div>
@@ -180,9 +166,9 @@ export default function Home() {
         </button>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
-          {heroSlides.map((_, index) => (
+          {heroSlides.map((slide, index) => (
             <button
-              key={index}
+              key={slide.link}
               onClick={() => setCurrentSlide(index)}
               className={`h-1.5 rounded-full transition-all duration-500 ${
                 index === currentSlide ? 'bg-[#c9a227] w-8' : 'bg-white/30 w-1.5'
@@ -285,7 +271,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-[2.25rem] font-bold text-[#1a1a2e] mt-2">High Quality Products</h2>
               <div className="divider mt-4" />
             </div>
-            <Link to="/products" className="text-[#4a90a4] text-sm font-semibold flex items-center gap-1.5 hover:text-[#1a1a2e] transition-colors">
+            <Link to="/products" className="text-primary text-sm font-semibold flex items-center gap-1.5 hover:text-[#c9a227] transition-colors">
               View All Products <ArrowRight size={16} />
             </Link>
           </div>
@@ -299,7 +285,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
               >
-                <Link to={product.link} className="product-card block bg-white rounded-xl overflow-hidden border border-gray-100">
+                <Link to={product.link} className="product-card block bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                   <div className="overflow-hidden aspect-[4/5]">
                     <img
                       src={product.image}
@@ -308,7 +294,10 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 text-center border-t border-gray-50">
-                    <h3 className="font-semibold text-[#1a1a2e] text-sm">{product.name}</h3>
+                    <h3 className="font-semibold text-primary text-sm">{product.name}</h3>
+                    <span className="mt-3 inline-flex items-center justify-center gap-1 text-sm font-semibold text-primary hover:text-[#c9a227] transition-colors">
+                      View Details <ArrowRight size={14} />
+                    </span>
                   </div>
                 </Link>
               </motion.div>
@@ -338,7 +327,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Link to={product.link} className="product-card block bg-white rounded-xl overflow-hidden border border-gray-100">
+                <Link to={product.link} className="product-card block bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                   <div className="overflow-hidden aspect-[4/5]">
                     <img
                       src={product.image}
@@ -347,7 +336,10 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 text-center border-t border-gray-50">
-                    <h3 className="font-semibold text-[#1a1a2e] text-sm">{product.name}</h3>
+                    <h3 className="font-semibold text-primary text-sm">{product.name}</h3>
+                    <span className="mt-3 inline-flex items-center justify-center gap-1 text-sm font-semibold text-primary hover:text-[#c9a227] transition-colors">
+                      View Details <ArrowRight size={14} />
+                    </span>
                   </div>
                 </Link>
               </motion.div>
@@ -392,56 +384,6 @@ export default function Home() {
                   <span className="text-3xl">{industry.icon}</span>
                   <h3 className="text-white font-medium text-sm">{industry.name}</h3>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="section-padding bg-white">
-        <div className="auto-container">
-          <div className="text-center mb-14">
-            <span className="sub-title">Testimonials</span>
-            <h2 className="text-3xl md:text-[2.25rem] font-bold text-[#1a1a2e] mt-2">What Our Clients Say</h2>
-            <div className="divider divider-center mt-4" />
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <div className="relative min-h-[280px]">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className={`transition-all duration-500 ${
-                    index === currentTestimonial ? 'opacity-100 visible' : 'opacity-0 invisible absolute inset-0'
-                  }`}
-                >
-                  <div className="testimonial-card text-center">
-                    <p className="text-gray-600 text-base italic leading-[1.8] mb-6">
-                      &ldquo;{testimonial.text}&rdquo;
-                    </p>
-                    <div className="flex justify-center gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={16} className="star-rating fill-current" />
-                      ))}
-                    </div>
-                    <p className="font-semibold text-[#1a1a2e]">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex justify-center gap-2 mt-8">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTestimonial(index)}
-                  className={`h-1.5 rounded-full transition-all duration-400 ${
-                    index === currentTestimonial ? 'bg-[#1a1a2e] w-6' : 'bg-gray-300 w-1.5'
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
               ))}
             </div>
           </div>

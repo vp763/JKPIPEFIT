@@ -23,7 +23,7 @@ export const products: Product[] = [
     bannerImage: '/images/hero-sheets.jpg',
     shortDescription: 'High-quality stainless steel, duplex, and alloy steel sheets for industrial applications.',
     description:
-      'JK Pipefit LLP manufactures and supplies a comprehensive range of metal sheets in various grades and finishes. Our sheets are produced using advanced rolling technology to ensure uniform thickness, excellent surface finish, and superior mechanical properties. We offer both cold rolled and hot rolled sheets suitable for fabrication, construction, and industrial applications.',
+      'JK Pipefit manufactures and supplies a comprehensive range of metal sheets in various grades and finishes. Our sheets are produced using advanced rolling technology to ensure uniform thickness, excellent surface finish, and superior mechanical properties. We offer both cold rolled and hot rolled sheets suitable for fabrication, construction, and industrial applications.',
     specs: [
       'Thickness: 0.3mm - 100mm',
       'Width: 1000mm - 2500mm',
@@ -111,7 +111,7 @@ export const products: Product[] = [
     bannerImage: '/images/hero-pipes.jpg',
     shortDescription: 'Seamless and welded pipes and tubes for high-pressure and corrosive environments.',
     description:
-      'JK Pipefit LLP offers an extensive range of pipes and tubes in seamless and welded configurations. Our products are manufactured to international standards and are suitable for high-pressure, high-temperature, and corrosive applications. We provide pipes with various end finishes including plain, beveled, and threaded.',
+      'JK Pipefit offers an extensive range of pipes and tubes in seamless and welded configurations. Our products are manufactured to international standards and are suitable for high-pressure, high-temperature, and corrosive applications. We provide pipes with various end finishes including plain, beveled, and threaded.',
     specs: [
       'OD: 6mm - 630mm',
       'Wall Thickness: SCH 5S - SCH XXS',
@@ -369,7 +369,7 @@ export const products: Product[] = [
     bannerImage: '/images/hero-pipes.jpg',
     shortDescription: 'Manufacturer of carbon steel pipe fittings for industrial piping systems.',
     description:
-      'JK Pipefit LLP is a leading manufacturer of carbon steel pipe fittings. Our carbon steel fittings are designed for high-pressure and high-temperature applications in oil & gas, power generation, and petrochemical industries. We produce elbows, tees, reducers, caps, and stub ends in various schedules and sizes with excellent weldability and mechanical properties.',
+      'JK Pipefit is a leading manufacturer of carbon steel pipe fittings. Our carbon steel fittings are designed for high-pressure and high-temperature applications in oil & gas, power generation, and petrochemical industries. We produce elbows, tees, reducers, caps, and stub ends in various schedules and sizes with excellent weldability and mechanical properties.',
     specs: [
       'Sizes: 1/2" - 48" (DN15 - DN1200)',
       'Schedules: SCH 20 - SCH XXS',
@@ -542,11 +542,11 @@ export const products: Product[] = [
     id: 'gunmetal-flanges',
     slug: 'gunmetal-flanges',
     name: 'Gunmetal Flanges',
-    image: '/images/gunmetal-flanges.jpg',
+    image: '/images/hero-gunmetal.jpg',
     bannerImage: '/images/hero-gunmetal.jpg',
     shortDescription: 'Durable Gunmetal flanges for valves, pumps, and marine piping systems.',
     description:
-      'JK Pipefit LLP manufactures high-quality Gunmetal (Bronze) flanges that offer excellent corrosion resistance, especially in seawater and brackish water environments. Gunmetal flanges are widely used in marine applications, valve manufacturing, pump connections, and hydraulic systems. Our Gunmetal flanges are precision cast and machined to meet international standards.',
+      'JK Pipefit manufactures high-quality Gunmetal (Bronze) flanges that offer excellent corrosion resistance, especially in seawater and brackish water environments. Gunmetal flanges are widely used in marine applications, valve manufacturing, pump connections, and hydraulic systems. Our Gunmetal flanges are precision cast and machined to meet international standards.',
     specs: [
       'Sizes: 1/2" - 24" (DN15 - DN600)',
       'Pressure Class: 150# - 600#',

@@ -29,7 +29,7 @@ const usefulLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f0f1a] text-white">
+    <footer className="bg-[#0f0f1a] text-white pt-3">
       {/* Main Footer */}
       <div className="auto-container py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
@@ -38,12 +38,12 @@ export default function Footer() {
             <Link to="/" className="inline-block mb-6">
               <img
                 src="/images/logo.png"
-                alt="JK Pipefit LLP"
-                className="h-14 w-auto object-contain brightness-0 invert"
+                alt="JK Pipefit"
+                className="h-14 w-auto object-contain z-20"
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
-              Leading manufacturer of high-quality pipe fittings, flanges, sheets, plates, and industrial metal products. ISO certified with 30+ years of excellence.
+              ISO certified with 10+ years of experience in pipe fittings, flanges, sheets, plates, and industrial metal products.
             </p>
             <div className="flex items-center gap-3">
               <a
@@ -53,7 +53,7 @@ export default function Footer() {
                 <Phone size={16} />
               </a>
               <a
-                href="mailto:info@jkpipefit.com"
+                href="mailto:jkpipefit@gmail.com"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#c9a227] hover:text-[#0f0f1a] transition-all"
               >
                 <Mail size={16} />
@@ -102,7 +102,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Shop No 2, Ground Flr, Plot No 546, Patra Chawl, Pathe Bapurao Marg, Near Gulalwadi Circle, Mumbai - 400004.
+                  OFFICE NO. 27A, FLOOR-1ST, PLOT-160, MULJI MADHAVJI NIWAS, NEAR C P TANK BEST SUB STATION, CP TANK, GIRGAON, MUMBAI - 400004, MAHARASHTRA (INDIA)
                 </p>
               </li>
               <li className="flex items-start gap-3">
@@ -118,8 +118,8 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-[#c9a227] mt-0.5 shrink-0" />
-                <a href="mailto:info@jkpipefit.com" className="text-gray-400 text-sm hover:text-[#c9a227] transition-colors">
-                  info@jkpipefit.com
+                <a href="mailto:jkpipefit@gmail.com" className="text-gray-400 text-sm hover:text-[#c9a227] transition-colors">
+                  jkpipefit@gmail.com
                 </a>
               </li>
             </ul>
@@ -131,7 +131,7 @@ export default function Footer() {
       <div className="border-t border-white/5">
         <div className="auto-container py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-            <p>Copyright © 2024 JK Pipefit LLP. All rights reserved.</p>
+            <p>Copyright © 2024 JK Pipefit. All rights reserved.</p>
             <div className="flex items-center gap-6">
               {usefulLinks.slice(0, 4).map((link) => (
                 <Link
